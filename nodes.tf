@@ -60,7 +60,7 @@ resource "azurerm_dns_a_record" "cluster" {
   zone_name           = var.dns_zone_name
   resource_group_name = var.resource_group_name
   ttl                 = 30
-  records             = [azurerm_network_interface.this.private_ip_address]
+  records             = [for res in azurerm_network_interface.this: private_ip_address]
 }
 
 
