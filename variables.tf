@@ -5,3 +5,7 @@ variable "subnet_id" {
 variable "resource_group_name" {
   type = string
 }
+
+variable "public_ssh_key" {
+  type = string
+}
